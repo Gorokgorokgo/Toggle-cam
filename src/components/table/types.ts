@@ -10,16 +10,17 @@ export type RowHeader = {
   children?: RowHeader[];
 };
 
-export type DataCell = {
-  value: string;
-  parentColIds: string[];
-  parentRowId: string;
-};
-
 export type TableData = {
   table: {
     columns: Column[];
     rowHeaders: RowHeader[];
     data: DataCell[];
   };
+};
+
+export type DataCell = {
+  value: string;
+  parentColIds: string[];
+  parentRowId: string;
+  paymentLeafId?: string; 
 };
